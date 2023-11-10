@@ -41,10 +41,10 @@ jobs:
         # generating HTML report etc.
         run: |
           [[ -e cache ]] && mkdir -p .cache && mv cache ~/.cache/cve-bin-tool
-          pip install git+https://github.com/intel/cve-bin-tool@main
+          pip install cve-bin-tool
+      #    pip install git+https://github.com/intel/cve-bin-tool@main
       # In case you prefer current PyPI version, you need to hard code CLI options
       # for cve-bin-tool in the action itself and have to use CSV or JSON as output format.
-      # pip install cve-bin-tool
       - name: build package
         # Here, we are building Python wheel for this example.
         # You need to replace this with your build process.
